@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
       <Typography style={{ margin: 30 }} variant="h2">
-        React QR Code
+        QR Code Scanner Using Regex
       </Typography>
 
       <Grid container spacing={6}>

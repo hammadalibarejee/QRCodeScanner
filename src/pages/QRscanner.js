@@ -10,12 +10,13 @@ function QRscanner() {
   const [qrscan, setQrscan] = useState("No result");
   const handleScan = (data) => {
     if (data) {
-      console.log(data);
+      //Generating Regex
       let re = new RegExp("REF-[0-9]+");
-      re.test(data);
-      console.log(re, re.test(data));
 
+      //Setting Data from QR Code
       setQrscan(data);
+
+      //Validating the regex
       if (re.test(data)) {
         toast.success("Qr Code is valid");
       } else {
@@ -34,7 +35,7 @@ function QRscanner() {
           <ArrowBack />
         </Fab>
       </Link>
-      <span>QR Scanner</span>
+      <span>QR Code Validation Using Regex</span>
 
       <center>
         <div style={{ marginTop: 30 }}>
